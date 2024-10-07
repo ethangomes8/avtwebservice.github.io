@@ -88,7 +88,7 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2>Contactez-nous</h2>
-            <form action="#">
+            <form id="contact-form" action="#">
                 <input type="text" placeholder="Votre nom" required>
                 <input type="email" placeholder="Votre email" required>
                 <textarea placeholder="Décrivez votre projet" required></textarea>
@@ -103,5 +103,21 @@
         </div>
     </footer>
 
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("_sREfY3Hcxs0OKEHX");
+        })();
+    
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            emailjs.sendForm('service_e453dhe', 'template_vq74686', this)
+                .then(function() {
+                    alert('Message envoyé avec succès!');
+                }, function(error) {
+                    alert('Erreur lors de l\'envoi: ' + JSON.stringify(error));
+                });
+        });
+    </script>
+    
 </body>
 </html>

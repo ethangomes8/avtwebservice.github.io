@@ -25,6 +25,8 @@ header {
 header .logo {
     float: left;
     position: relative;
+    top : -30px;
+    left : -30px;
 }
 
 header nav {
