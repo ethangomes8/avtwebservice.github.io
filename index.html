@@ -25,6 +25,39 @@
         </div>
     </header>
 
+    <section id="progress" class="progress">
+        <div class="container">
+            <h2>Suivi de la progression de votre site</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nom du projet</th>
+                        <th>Conception</th>
+                        <th>Développement</th>
+                        <th>Tests</th>
+                        <th>Lancement</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Projet Alpha</td>
+                        <td><div class="progress-bar" style="width: 80%;">80%</div></td>
+                        <td><div class="progress-bar" style="width: 50%;">50%</div></td>
+                        <td><div class="progress-bar" style="width: 20%;">20%</div></td>
+                        <td><div class="progress-bar" style="width: 0%;">0%</div></td>
+                    </tr>
+                    <tr>
+                        <td>Projet Beta</td>
+                        <td><div class="progress-bar" style="width: 100%;">100%</div></td>
+                        <td><div class="progress-bar" style="width: 70%;">70%</div></td>
+                        <td><div class="progress-bar" style="width: 40%;">40%</div></td>
+                        <td><div class="progress-bar" style="width: 0%;">0%</div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
     <section class="hero">
         <div class="container">
             <h2>Votre site internet sur mesure, simple et efficace</h2>
@@ -88,7 +121,7 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2>Contactez-nous</h2>
-            <form id="contact-form" action="#">
+            <form id="contact-form">
                 <input type="text" placeholder="Votre nom" required>
                 <input type="email" placeholder="Votre email" required>
                 <textarea placeholder="Décrivez votre projet" required></textarea>
@@ -103,7 +136,7 @@
         </div>
     </footer>
 
-    <script type="text/javascript">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js">
         (function() {
             emailjs.init("_sREfY3Hcxs0OKEHX");
         })();
