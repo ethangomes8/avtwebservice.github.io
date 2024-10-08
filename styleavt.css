@@ -1,179 +1,244 @@
-* {
+/* Général */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #F3F4F6;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
-body {
-    line-height: 3.5;
-    background-color: #f4f4f4;
-    color: #333;
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
 }
 
-.container {
-    width: 80%;
-    margin: auto;
+h2, h3 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #1E3A8A;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
 header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
+    background-color: #1E3A8A;
+    padding: 20px 0;
+    color: white;
 }
 
 header .logo {
-    float: left;
-    position: relative;
-    top : -30px;
-    left : -30px;
-}
-
-header nav {
-    float: right;
+    display: flex;
+    align-content: space-between;
+    justify-content: center;
+    padding : 10px;
 }
 
 header nav ul {
+    display: flex;
+    align-content: space-between;
+    justify-content: center;
     list-style: none;
 }
 
 header nav ul li {
-    display: inline;
-    margin-right: 20px;
+    margin: 0 15px;
 }
 
 header nav ul li a {
-    color: #fff;
-    text-decoration: none;
+    color: white;
 }
 
-header .cta {
-    background: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
+.dvi {
+    position: absolute;
+    top : 50px;
+    right : 50px;
+    margin-left: auto;
+    background-color: #3B82F6;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    transition: background-color 0.3s;
 }
 
+.dvi:hover {
+    background-color: #1E3A8A;
+}
+
+.cta {
+    background-color: #3B82F6;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+}
+
+.cta:hover {
+    background-color: #1E3A8A;
+}
+
+/* Section Hero */
 .hero {
-    background: url('hero-image.jpg') no-repeat center center/cover;
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #ffffff;
+    color: white;
     text-align: center;
-    color: #000000;
+    padding: 80px 0;
 }
 
 .hero h2 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 1.2em;
-    margin-bottom: 40px;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
 }
 
-.hero .cta {
-    background: #007bff;
-    color: #fff;
-    padding: 15px 30px;
-    border-radius: 5px;
+/* Section Services */
+.services {
+    background-color: #fff;
+    padding: 80px 0;
 }
 
-.services, .portfolio, .testimonials, .contact {
-    padding: 50px 0;
-}
-
-.services h2, .portfolio h2, .testimonials h2, .contact h2 {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.service-items, .portfolio-items, .testimonial-items {
+.service-items {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
 }
 
-.service-item, .portfolio-item, .testimonial-item {
-    width: 30%;
+.service-item {
     text-align: center;
+    width: 30%;
+}
+
+.service-item i {
+
+    font-size: 3rem;
+    color: #1E3A8A;
+    margin-bottom: 15px;
+}
+
+.service-item h3 {
+    font-size: 1.3rem;
     margin-bottom: 20px;
 }
 
-.portfolio-item img {
-    width: 100%;
-    border-radius: 10px;
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
-form {
+/* Section Portfolio */
+.portfolio {
+    background-color: #fff;
+    padding: 80px 0;
+}
+.portfolio-items {
+    display: flex;
+    justify-content: space-around;
+}
+
+.portfolio-item {
+    text-align: center;
+    width: 30%;
+}
+
+.portfolio-item i {
+    font-size: 3rem;
+    color: #1E3A8A;
+    margin-bottom: 15px;
+}
+
+.portfolio h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.image-main {
+    width : 150%
+}
+
+.thumbnail {
+    width : 90%
+}
+
+/* Section Temoignages */
+.testimonial {
+    background-color: #ffffff;
+    padding: 80px 0;
+}
+.testimonial-items {
+    display: flex;
+    justify-content: space-around;
+}
+
+.testimonial-item {
+    text-align: center;
+    width: 30%;
+    color: #1E3A8A;
+    margin-bottom: 20px;
+}
+
+.testimonial-item i {
+    font-size: 3rem;
+    color: #1E3A8A;
+    margin-bottom: 15px;
+}
+
+
+/* Section Contact */
+.contact {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.contact form {
     display: flex;
     flex-direction: column;
-    max-width: 600px;
-    margin: auto;
+    align-items: center; 
 }
 
-form input, form textarea {
-    padding: 10px;
-    margin-bottom: 20px;
+.contact input, .contact textarea {
+    width: 50%;
+    padding: 15px;
+    margin-bottom: 10px 0;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 4px;
 }
 
-form button {
-    padding: 10px;
-    background: #007bff;
-    color: #fff;
+.contact button {
+    margin-left: auto; 
+    margin-right: 300px; 
+    margin-top: 20px;
+    padding: 15px 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: #1E3A8A;
+    color: white;
+    padding: 15px 30px;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+    width: 10%;
 }
 
+.contact button:hover {
+    background-color: #3B82F6;
+}
+
+/* Footer */
 footer {
-    background: #333;
-    color: #fff;
+    background-color: #1E3A8A;
+    color: white;
     text-align: center;
     padding: 20px 0;
-    margin-top: 50px;
 }
 
-.progress {
-    padding: 50px 0;
-    background-color: #f9f9f9;
+footer p {
+    margin: 0;
 }
 
-.progress h2 {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-thead th {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px;
-    text-align: left;
-}
-
-tbody td {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-}
-
-.progress-bar {
-    background-color: #007bff;
-    height: 20px;
-    border-radius: 5px;
-    color: #fff;
-    text-align: center;
-    line-height: 20px;
-    font-size: 0.9em;
-}
 
