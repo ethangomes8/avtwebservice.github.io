@@ -15,6 +15,7 @@
                 <h1>AvtWebServices</h1>
             </div>
             <a href="#contact" class="dvi">Demander un devis gratuit</a>
+            <img src="image/logoentier.png" id="imglogo">
             <nav>
                 <ul>
                     <li><a href="#services">Services</a></li>
@@ -64,17 +65,19 @@
                 <div class="portfolio-item">
                     <img id="main-image" src="image/image-principale.png" alt="Image principale" class="image-main">
                     <div class="thumbnail-container">
-                        <img src="image/image-principale_annexe1.png" alt="Image 1" class="thumbnail" onclick="changeImage('image-principale_annexe1')">
-                        <img src="image/image-principale_annexe2.png" alt="Image 2" class="thumbnail" onclick="changeImage('image-principale_annexe2')">
-                        <img src="image/image-principale_annexe3.png" alt="Image 3" class="thumbnail" onclick="changeImage('image-principale_annexe3')">
-                    <p>Projet 1 - Site vitrine pour une entreprise locale</p>
+                        <img src="image/image-principale.png" alt="Image 1" class="thumbnail" onclick="changeImage('image/image-principale.png')">
+                        <img src="image/image-principale_annexe1.png" alt="Image 2" class="thumbnail" onclick="changeImage('image/image-principale_annexe1.png')">
+                        <img src="image/image-principale_annexe2.png" alt="Image 3" class="thumbnail" onclick="changeImage('image/image-principale_annexe2.png')">
+                        <img src="image/image-principale_annexe3.png" alt="Image 4" class="thumbnail" onclick="changeImage('image/image-principale_annexe3.png')">
+                        <img src="image/image-principale_annexe4.png" alt="Image 5" class="thumbnail" onclick="changeImage('image/image-principale_annexe4.png')">
+                    <p>Projet 1 - Carte de restaurant</p>
                 </div>
                     <img id="second-image" src="image-secondaire.jpg" alt="Image secondaire" class="image-secondaire">
                     <div class="thumbnail-container-deux">
                         <img src="image1.jpg" alt="Image 1" class="thumbnail" onclick="changeImage('image1.jpg')">
                         <img src="image2.jpg" alt="Image 2" class="thumbnail" onclick="changeImage('image2.jpg')">
                         <img src="image3.jpg" alt="Image 3" class="thumbnail" onclick="changeImage('image3.jpg')">
-                    <p>Projet 2 - Carte de restaurant</p>
+                    <p>Projet 2 - Site vitrine pour une entreprise locale </p>
                 </div>
             </div>
         </div>
@@ -114,25 +117,8 @@
         </div>
     </footer>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js">
-        (function() {
-            emailjs.init("_sREfY3Hcxs0OKEHX");
-        })();
-    
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            emailjs.sendForm('service_e453dhe', 'template_vq74686', this)
-                .then(function() {
-                    alert('Message envoyé avec succès!');
-                }, function(error) {
-                    alert('Erreur lors de l\'envoi: ' + JSON.stringify(error));
-                });
-        });
-        function changeImage(imageSrc) {
-            const mainImage = document.getElementById('main-image');
-            mainImage.src = imageSrc; // Change la source de l'image principale
-        }
-    </script>
+    <script src="javaavt.js"> </script>
+
     
 </body>
 </html>

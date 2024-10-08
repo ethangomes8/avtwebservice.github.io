@@ -24,6 +24,14 @@ a {
 }
 
 /* Header */
+#imglogo {
+    width : 25%;
+    position: absolute;
+    top : 50px;
+    left : 50px;
+    margin-left: auto;
+}
+
 header {
     background-color: #1E3A8A;
     padding: 20px 0;
@@ -157,12 +165,42 @@ header nav ul li a {
     margin-bottom: 20px;
 }
 
+
+.portfolio {
+    text-align: center; 
+    margin: 40px 0;    
+}
+
 .image-main {
-    width : 150%
+    width: 100%;        
+    max-width: 800px; 
+    border-radius: 10px; 
+    margin-bottom: 20px; 
+    transition: transform 0.3s; 
+}
+
+.image-main:hover {
+    transform: scale(1.05); 
+}
+
+.thumbnail-container {
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap;
+    gap: 10px; 
 }
 
 .thumbnail {
-    width : 90%
+    width: 100px; 
+    height: auto; 
+    cursor: pointer; 
+    border: 2px solid transparent; 
+    border-radius: 5px; 
+    transition: border-color 0.3s; 
+}
+
+.thumbnail:hover {
+    border-color: #1E3A8A; 
 }
 
 /* Section Temoignages */
